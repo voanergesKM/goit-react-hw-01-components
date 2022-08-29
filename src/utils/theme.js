@@ -5,5 +5,6 @@ export const theme = {
     primaryText: '#3d4655',
     secondaryText: '#adb5bf',
     border: '#e5eaf0',
+    statText: '#fff',
   },
 };

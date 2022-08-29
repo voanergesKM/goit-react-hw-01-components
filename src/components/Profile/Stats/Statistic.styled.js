@@ -18,4 +18,5 @@ export const StatsUnit = styled.li`
 export const StatItem = styled.span`
   color: ${p =>
     p.accent ? p.theme.colors.primaryText : p.theme.colors.secondaryText};
+  font-weight: ${p => (p.accent ? 'bold' : 'normal')};
 `;
