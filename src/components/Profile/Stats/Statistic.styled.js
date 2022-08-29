@@ -13,12 +13,9 @@ export const StatsUnit = styled.li`
   display: flex;
   gap: ${p => p.theme.space[1]}px;
   flex-direction: column;
+`;
 
-  span {
-    color: ${p => p.theme.colors.secondaryText};
-    :last-child {
-      color: ${p => p.theme.colors.primaryText};
-      font-weight: bold;
-    }
-  }
+export const StatItem = styled.span`
+  color: ${p =>
+    p.accent ? p.theme.colors.primaryText : p.theme.colors.secondaryText};
 `;

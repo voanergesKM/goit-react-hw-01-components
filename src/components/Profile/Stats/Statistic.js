@@ -1,19 +1,19 @@
-import { StyledContainer, StatsUnit } from './Statistic.styled';
+import { StyledContainer, StatsUnit, StatItem } from './Statistic.styled';
 
 export const Statistic = ({ followers, views, likes }) => {
   return (
     <StyledContainer>
       <StatsUnit>
-        <span>Followers</span>
-        <span>{followers}</span>
+        <StatItem>Followers</StatItem>
+        <StatItem accent>{followers}</StatItem>
       </StatsUnit>
       <StatsUnit>
-        <span>Views</span>
-        <span>{views}</span>
+        <StatItem>Views</StatItem>
+        <StatItem accent>{views}</StatItem>
       </StatsUnit>
       <StatsUnit>
-        <span>Likes</span>
-        <span>{likes}</span>
+        <StatItem>Likes</StatItem>
+        <StatItem accent>{likes}</StatItem>
       </StatsUnit>
     </StyledContainer>
   );
