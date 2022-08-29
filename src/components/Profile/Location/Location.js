@@ -1,5 +1,5 @@
 import { StyledLocation } from './Location.styled';
 
-export const ProfileLocation = ({ location }) => {
+export const UserLocation = ({ location }) => {
   return <StyledLocation>{location}</StyledLocation>;
 };

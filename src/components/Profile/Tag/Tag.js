@@ -1,5 +1,5 @@
 import { StyledTag } from './Tag.styled';
 
-export const ProfileTag = ({ tag }) => {
+export const Tag = ({ tag }) => {
   return <StyledTag>@{tag}</StyledTag>;
 };

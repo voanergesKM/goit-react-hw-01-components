@@ -1,19 +1,36 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { Container } from 'components/Profile/Profile.styled';
-import { ProfileTitle } from './ProfileTitle';
-import { ProfileAvatar } from './Avatar';
-import { ProfileTag } from './Tag';
-import { ProfileLocation } from './Location';
-import user from 'components/Profile/user.json';
+import { Avatar, Title, Tag, UserLocation, Statistic } from './index';
 
-export const Profile = () => {
+export const Profile = ({ user }) => {
   return (
     <Container>
-      <ProfileAvatar source={user.avatar} />
-      <ProfileTitle text={user.username} />
-      <ProfileTag tag={user.tag} />
-      <ProfileLocation location={user.location} />
+      <Avatar source={user.avatar} />
+      <Title name={user.username} />
+      <Tag tag={user.tag} />
+      <UserLocation location={user.location} />
+      <Statistic
+        followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}
+      />
     </Container>
   );
+};
+
+Profile.propTypes = {
+  Profile: PropTypes.arrayOf(
+    PropTypes.exact({
+      avatar: PropTypes.string.isRequired,
+      username: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      stats: {
+        followers: PropTypes.string.isRequired,
+        views: PropTypes.string.isRequired,
+        likes: PropTypes.string.isRequired,
+      },
+    })
+  ),
 };
