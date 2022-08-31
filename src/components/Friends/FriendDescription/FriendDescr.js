@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Status, Avatar } from './FriendDescr.styled';
 import { Friend } from './FriendName';
 
@@ -9,4 +10,13 @@ export const FriendDescription = ({ friends }) => {
       <Friend friends={friends} />
     </>
   );
+};
+
+FriendDescription.propTypes = {
+  friends: PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
 };
