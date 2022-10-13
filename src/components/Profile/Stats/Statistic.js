@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import { StyledContainer, StatsUnit, StatItem } from './Statistic.styled';
+import { Box } from 'components/Box';
+import { StatsUnit, StatItem } from './Statistic.styled';
 
 export const Statistic = ({ followers, views, likes }) => {
   return (
-    <StyledContainer>
+    <Box as="ul" display="flex" bg="#f3f6f9">
       <StatsUnit>
         <StatItem>Followers</StatItem>
         <StatItem accent>
@@ -28,7 +29,7 @@ export const Statistic = ({ followers, views, likes }) => {
             likes.toString().slice(-3, likes.length)}
         </StatItem>
       </StatsUnit>
-    </StyledContainer>
+    </Box>
   );
 };
 

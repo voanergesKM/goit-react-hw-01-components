@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
 
-import { Container } from 'components/Profile/Profile.styled';
 import { Avatar, Title, Tag, UserLocation, Statistic } from './index';
+import { Box } from 'components/Box';
 
 export const Profile = ({ user }) => {
   return (
-    <Container>
+    <Box
+      maxWidth="320px"
+      textAlign="center"
+      pt={4}
+      boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+    >
       <Avatar source={user.avatar} />
       <Title name={user.username} />
       <Tag tag={user.tag} />
@@ -15,7 +20,7 @@ export const Profile = ({ user }) => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-    </Container>
+    </Box>
   );
 };
 
