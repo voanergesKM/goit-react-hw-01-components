@@ -1,14 +1,21 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 
-import { StyledContainer } from './Container.styled';
 import { Title, List } from './index';
 
 export const Statistic = ({ stats, title }) => {
   return (
-    <StyledContainer>
+    <Box
+      as="section"
+      mt={5}
+      pt={4}
+      width="460px"
+      textAlign="center"
+      boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+    >
       <Title title={title} />
       <List stats={stats} />
-    </StyledContainer>
+    </Box>
   );
 };
 

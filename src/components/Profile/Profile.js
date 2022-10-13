@@ -10,6 +10,7 @@ export const Profile = ({ user }) => {
       textAlign="center"
       pt={4}
       boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      as="section"
     >
       <Avatar source={user.avatar} />
       <Title name={user.username} />

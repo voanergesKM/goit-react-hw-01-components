@@ -2,7 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from 'utils/theme';
 
 import { Profile } from 'components/Profile/Profile';
-import { Statistic } from './Statistics/Container';
+import { Statistic } from './Statistics/Statistics';
 import { Friends } from './Friends/FriendList';
 import { Table } from './Transaction/Table';
 import user from 'data/user.json';
