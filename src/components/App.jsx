@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'utils/theme';
 
-import { Profile } from 'components/Profile/Profile';
+import { Profile } from './Profile/Profile';
 import { Statistic } from './Statistics/Statistics';
 import { Friends } from './Friends/FriendList';
 import { Table } from './Transaction/Table';
