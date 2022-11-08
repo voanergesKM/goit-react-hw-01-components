@@ -8,7 +8,6 @@ export const Statistic = ({ stats, title }) => {
     <Box
       as="section"
       mt={5}
-      pt={4}
       width="460px"
       textAlign="center"
       boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
